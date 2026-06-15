@@ -6,8 +6,13 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D6A159242FE0A9BB000E2E2E /* SmartNameSuggestions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A159232FE0A9BB000E2E2E /* SmartNameSuggestions.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D6A1590F2FE0A50E000E2E2E /* SmartNamingPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartNamingPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A159232FE0A9BB000E2E2E /* SmartNameSuggestions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SmartNameSuggestions.framework; path = ../../../System/Library/PrivateFrameworks/SmartNameSuggestions.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -22,6 +27,7 @@
 		D6A1590C2FE0A50E000E2E2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				D6A159242FE0A9BB000E2E2E /* SmartNameSuggestions.framework in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXGroup;
 			children = (
 				D6A159112FE0A50E000E2E2E /* SmartNamingPlayground */,
+				D6A159222FE0A9BB000E2E2E /* Frameworks */,
 				D6A159102FE0A50E000E2E2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +48,14 @@
 				D6A1590F2FE0A50E000E2E2E /* SmartNamingPlayground.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D6A159222FE0A9BB000E2E2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6A159232FE0A9BB000E2E2E /* SmartNameSuggestions.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,12 +255,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SmartNamingPlayground/ents.plist;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -264,6 +279,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -273,12 +292,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SmartNamingPlayground/ents.plist;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -296,6 +315,10 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartNamingPlayground/SmartNamingPlayground-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};

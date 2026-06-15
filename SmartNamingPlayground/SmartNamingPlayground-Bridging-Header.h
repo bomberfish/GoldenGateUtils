@@ -2,6 +2,7 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
+#import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 #import <Foundation/Foundation.h>
 #if __has_include(<AppKit/AppKit.h>)
 #import <AppKit/AppKit.h>
@@ -70,7 +71,7 @@ API_AVAILABLE(macos(27.0))
 /// Designated initializer. `typeIdentifier` is a UTType id (e.g. "public.rtf"); pass
 /// `speculative:YES` for background/autosave requests.
 - (nullable instancetype)initWithURL:(NSURL *)url
-                       typeIdentifier:(nullable NSString *)typeIdentifier
+                       typeIdentifier:(nullable UTType *)typeIdentifier
                           speculative:(BOOL)speculative
                                 error:(NSError **)error;          // @44@0:8@16@24B32^@36
 @end
@@ -80,7 +81,7 @@ API_AVAILABLE(macos(27.0))
 @interface SNDirectorySuggestionRequest : SNNameSuggestionRequest <NSSecureCoding>
 @property (nonatomic, copy) NSArray<NSString *> *childrenNames;   // T@"NSArray",N,C
 - (nullable instancetype)initWithURL:(NSURL *)url
-                       typeIdentifier:(nullable NSString *)typeIdentifier
+                       typeIdentifier:(nullable UTType *)typeIdentifier
                           speculative:(BOOL)speculative
                                 error:(NSError **)error;          // @44@0:8@16@24B32^@36
 @end
