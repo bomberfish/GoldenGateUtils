@@ -34,10 +34,12 @@ struct TuningSlider: View {
                     Button(action: {
                         GlobalDefaults.write(defaultValue, forKey: key)
                         GlobalDefaults.write(defaultValue, forKey: cursorKey)
+                        internalValue = defaultValue
                     }, label: {Image(systemName: "arrow.clockwise")})
                     Button(action: {
                         GlobalDefaults.write(nil, forKey: key)
                         GlobalDefaults.write(nil, forKey: cursorKey)
+                        internalValue = defaultValue
                     }, label: {Image(systemName: "trash")})
                 }
                 .buttonStyle(.plain)
@@ -48,6 +50,9 @@ struct TuningSlider: View {
                     GlobalDefaults.write(internalValue, forKey: key)
                     GlobalDefaults.write(internalValue, forKey: cursorKey)
                 }
+        }
+        .onAppear {
+            internalValue = GlobalDefaults.read(key) as? CGFloat ?? defaultValue
         }
     }
 }

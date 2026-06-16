@@ -14,5 +14,7 @@ struct FlexiGlassTunerApp: App {
             ContentView()
         }
         .windowResizability(.contentSize)
+        
+        Window("Widget Factory", id: "demo") {WidgetFactoryView()}
     }
 }
