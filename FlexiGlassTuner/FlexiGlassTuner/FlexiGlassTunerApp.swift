@@ -13,5 +13,6 @@ struct FlexiGlassTunerApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizability(.contentSize)
     }
 }
